@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 
 # 本地 Flask 伺服器的 URL（請改為您的公網 IP 或動態域名）
-LOCAL_SERVER_URL = os.environ.get("LOCAL_SERVER_URL") or "http://114.35.41.49:5000/webhook"
+LOCAL_SERVER_URL = os.environ.get("LOCAL_SERVER_URL") or "http://192.168.1.206:5000/webhook"
 
 @app.route("/", defaults={"path": ""}, methods=["GET", "POST"])
 @app.route("/<path:path>", methods=["GET", "POST"])
